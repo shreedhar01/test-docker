@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/shreedhar01/test-docker/compare/v1.0.0...v1.0.1) (2025-09-22)
+
+
+### Bug Fixes
+
+* docker-publish job run on tag trigger ([3a9ef52](https://github.com/shreedhar01/test-docker/commit/3a9ef52070a49e64429f51f3fa5270ecc51e4e82))
+
 # 1.0.0 (2025-09-22)
 
 
