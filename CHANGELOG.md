@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/shreedhar01/test-docker/compare/v1.1.0...v1.2.0) (2025-09-22)
+
+
+### Features
+
+* workflow_dispatch in docker-publish ([d9b8973](https://github.com/shreedhar01/test-docker/commit/d9b89736e844c13eb5f47a4193a72fcf69352909))
+
 # [1.1.0](https://github.com/shreedhar01/test-docker/compare/v1.0.1...v1.1.0) (2025-09-22)
 
 
