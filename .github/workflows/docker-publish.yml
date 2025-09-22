@@ -4,12 +4,22 @@ on:
   push:
     tags:
       - 'v*'
+  # Add workflow_dispatch for manual testing
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to build'
+        required: true
+        default: 'latest'
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      # Make sure we're checking out the tag, not main
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -19,7 +29,12 @@ jobs:
 
       - name: Extract version parts
         run: |
-          VERSION=${GITHUB_REF#refs/tags/v}
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            VERSION=${{ github.event.inputs.tag }}
+            VERSION=${VERSION#v}  # Remove 'v' prefix if present
+          else
+            VERSION=${GITHUB_REF#refs/tags/v}
+          fi
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "MAJOR=${VERSION%%.*}" >> $GITHUB_ENV
           echo "MINOR=${VERSION%.*}" >> $GITHUB_ENV
