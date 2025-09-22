@@ -22,8 +22,8 @@ jobs:
       - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --no-verify
-
+          HUSKY: 0
+        run: npx semantic-release 
   docker:
     needs: release
     runs-on: ubuntu-latest
