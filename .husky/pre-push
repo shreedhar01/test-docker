@@ -1,0 +1,4 @@
+echo "🏗️ Building project..."
+pnpm build || exit 1
+
+echo "✅ All checks passed, pushing..."
