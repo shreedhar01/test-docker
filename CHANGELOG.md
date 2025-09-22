@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/shreedhar01/test-docker/compare/v1.0.1...v1.1.0) (2025-09-22)
+
+
+### Features
+
+* pre-push hook ([1ef0b46](https://github.com/shreedhar01/test-docker/commit/1ef0b46f2b8630692b879ba2b0c3c67aedb152c6))
+
 ## [1.0.1](https://github.com/shreedhar01/test-docker/compare/v1.0.0...v1.0.1) (2025-09-22)
 
 
